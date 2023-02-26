@@ -38,7 +38,7 @@ $leaderboard = [
 
   <?php foreach ($leaderboard as $player) { ?>
     <div>
-      <?php echo $player['pseudo']; ?>
+      <?php echo $player['email']; ?>
       <br />
       <?php echo $player['score']; ?>
     </div>
