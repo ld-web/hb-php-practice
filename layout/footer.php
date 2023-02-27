@@ -1,7 +1,7 @@
 <footer class="container-fluid mt-5 bg-dark text-light fixed-bottom">
     <div class="row justify-content-around py-3">
         <div class="col-md-6 d-flex align-items-center">
-            <a class="text-uppercase text-decoration-none text-light">My corp <br>©2023</a>
+            <a class="text-uppercase text-decoration-none text-light fw-bold">My corp<br><span class="fw-light">©2023</span></a>
         </div>
         <div class="col-md-3">
             <ul class="list-unstyled">
