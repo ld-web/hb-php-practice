@@ -21,3 +21,10 @@ $leaderboard = [
     'score' => 530,
   ],
 ];
+
+// La fonction "array_map" prend en premier argument une fonction anonyme qui sera appliquée à chaque élément du tableau "$leaderboard". Cette fonction anonyme a un argument "$leaderboard" qui représente chaque joueur dans le tableau.
+
+$replaceChar = array_map(function($leaderboard) {
+    $leaderboard['email'] = str_replace('@', '/', $leaderboard['email']);
+    return $leaderboard;
+}, $leaderboard);
