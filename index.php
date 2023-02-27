@@ -22,6 +22,15 @@ $leaderboard = [
   ],
 ];
 ?>
+<?php
+// La fonction "array_map" prend en premier argument une fonction anonyme qui sera appliquée à chaque élément du tableau "$leaderboard". Cette fonction anonyme a un argument "$leaderboard" qui représente chaque joueur dans le tableau.
+
+$replaceChar = array_map(function($leaderboard) {
+    $leaderboard['email'] = str_replace('@', '/', $leaderboard['email']);
+    return $leaderboard;
+}, $leaderboard);
+?>
+
 
 
 <?php require_once 'layout/navbar.php';
@@ -29,11 +38,11 @@ $leaderboard = [
 
     <h1 class="mt-5">Leaderboard</h1>
 
-    <?php foreach ($leaderboard as $player) { ?>
+    <?php foreach ($replaceChar as $leaderboardValue) { ?>
       <div>
-        <?php echo $player['email']; ?>
+        <?php echo $leaderboardValue['email']; ?>
         <br />
-        <?php echo $player['score']; ?>
+        <?php echo $leaderboardValue['score']; ?>
       </div>
     <?php } ?>
 
