@@ -1,49 +1,22 @@
 <?php
-$leaderboard = [
-  [
-    'email' => 'if@nivwev.ni',
-    'score' => 816,
-  ],
-  [
-    'email' => 'diteris@hajkowpof.je',
-    'score' => 798,
-  ],
-  [
-    'email' => 'nahefun@zip.bz',
-    'score' => 793,
-  ],
-  [
-    'email' => 'zogputeh@roz.et',
-    'score' => 688,
-  ],
-  [
-    'email' => 'wa@tetaptaw.pl',
-    'score' => 530,
-  ],
-];
+require_once __DIR__ . '/data.php';
+require_once __DIR__ . '/header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leaderboard</title>
-</head>
+<h1 class="text-center">Leaderboard</h1>
 
-<body>
-
-  <h1>Leaderboard</h1>
-
+<div class="d-flex gap-2">
   <?php foreach ($leaderboard as $player) { ?>
-    <div>
-      <?php echo $player['pseudo']; ?>
-      <br />
-      <?php echo $player['score']; ?>
+    <div class="card" style="width: 18rem;">
+      <img src="image.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <?php echo $player['email']; ?>
+        <br />
+        <?php echo $player['score']; ?>
+      </div>
     </div>
   <?php } ?>
+</div>
 
-</body>
-
-</html>
+<?php
+require_once __DIR__ . '/footer.php';
