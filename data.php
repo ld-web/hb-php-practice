@@ -21,4 +21,3 @@ $leaderboard = [
     'score' => 530,
   ],
 ];
-?>

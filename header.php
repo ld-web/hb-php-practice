@@ -10,5 +10,3 @@
 </head>
 
 <body style="margin: 0px;">
-
-  <h1 class="text-center">Leaderboard</h1>
